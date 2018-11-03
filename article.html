@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Steempedia</title>
+		
+		
+		
+		<meta name="description" content="Read the full post on Steempedia.">
+		<meta name="keywords" content="steempedia, steempedia.com, steempedia apps, steem apps, steemit apps, steem services, steemit services, steem, steemit, steem blockchain, publish article, paid blogging, cryptocurrency, steem dollars, smart media tokens, blockchain powered blog, news, make money online, work at home, bitcoin, blockchain">
+		<meta name="application-name" content="Steempedia">
+		
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Steempedia">
+		<meta property="og:title" content="Another awesome post on Steem - Steempedia">
+		<meta property="og:description" content="Read the full post on Steempedia.">
+		<meta property="og:image" content="https://www.steempedia.com/img/steempedia.png">
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@steempedia">
+		<meta name="twitter:title" content="Another awesome post on Steem - Steempedia">
+		<meta name="twitter:description" content="Read the full post on Steempedia.">
+		
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+		
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		
+		
+		
+		<!-- UIkit JS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/css/uikit.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.36/js/uikit-icons.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+		<script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+		<script src="/scripts/sc2.min.js"></script>
+	
+<style>
+	
+
+
+blockquote{
+  font: 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+}
+
+blockquote p {
+  display: inline;
+}
+
+code {
+	background-color: #f8f8f8;
+	padding: 5px 5px 5px 5px;
+	margin: 5px 5px 5px 5px;
+	overflow-wrap: break-word !important;
+	word-wrap: break-word !important;
+	white-space: normal !important;
+}
+
+
+pre {
+	background-color: #f8f8f8 !important;
+	margin: 40px 40px 40px 40px;
+	padding: 20px 20px 20px 20px;
+	font-size: 90%;
+}
+
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+
+
+</style>
+	
+	
+	</head>
+	
+	<!-- Navbar-big-screen section -->
+	<section name="navbar" style="display:block" class="desktop-navbar">
+	
+		<div id="navbar"></div>
+	
+	</section>
+	
+	
+	
+	
+    <body>
+	
+	
+	
+	
+	<!-- Navbar-big-screen section -->
+	<section name="loader" style="display:block; margin-top:50px; margin-bottom:50px" id="loader-area">
+	
+	<div class="uk-container">
+	
+			<div style="margin-left:50%" id="article-spinner" class="" uk-spinner></div>
+		
+	
+	</div>	
+	
+	</section>
+	
+	
+	
+	
+	<section name="content" id="article-area" style="display:none">
+	
+	<div class="uk-container">
+	
+	
+		<div class="" id="header-section" uk-grid>	
+		
+    <div class="uk-width-3-4@m">
+        <div class="uk-card uk-card-default uk-card-body">
+			
+			
+			
+		<article class="uk-article">
+
+    <h1 class="uk-article-title" id="article-heading"></h1>
+
+    <p class="uk-article-meta">Written by <a href="#" class="uk-text-primary" id="article-author">..</a> on <span class="uk-text-primary" id="article-time">..</span>. Posted in <a href="#" class="uk-text-primary" id="article-category">..</a>.</p>
+	
+	<hr/><br/>
+	
+    <div id="article-body" style="word-wrap: break-word">
+	</div>
+	
+	
+	
+	
+	
+	
+	<!-- tags list -->
+	<br/>
+	
+	<div class="uk-grid-small uk-child-width-auto" uk-grid>
+		<div id="tags">
+		</div>
+	</div>
+	
+	
+	<br/>
+	<br/>
+	
+	
+		<div class="uk-align-right">
+		
+			<a href="" target="_blank" id="twitter" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+			<a href="" target="_blank" id="facebook" class="uk-icon-button  uk-margin-small-right" uk-icon="facebook"></a>
+			<a href="" target="_blank" id="google" class="uk-icon-button  uk-margin-small-right" uk-icon="google-plus"></a>
+			<a href="" target="_blank" id="linkedin" class="uk-icon-button  uk-margin-small-right" uk-icon="linkedin"></a>
+			<a href="" target="_blank" id="tumblr" class="uk-icon-button" uk-icon="tumblr"></a>
+			
+		</div>
+		
+	
+	
+	<br/>
+	<br/>
+	
+	
+	
+	
+	<!-- post info -->
+	<br/><br/>
+	
+	<div class="uk-placeholder">
+    <div class="uk-grid-small uk-child-width-auto" uk-grid>
+        <div>
+			<span class="uk-icon uk-margin-small-right" style="font-size: 1.1rem;">$</span>
+            <a class="uk-button uk-button-text uk-text-primary" href="javascript:void(0)" id="earned"></a>
+        </div>
+        <div>
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: heart"></span>
+            <a class="uk-button uk-button-text uk-text-primary" href="javascript:void(0)" id="votes-count"></a>
+        </div>
+        <div>
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+            <a class="uk-button uk-button-text uk-text-primary" href="javascript:void(0)" id="comment-count"></a>
+        </div>
+        <div>
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: hashtag"></span>
+            <a class="uk-button uk-button-text uk-text-primary" href="javascript:void(0)" id="tag"></a>
+        </div>
+        <div>
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: clock"></span>
+            <a class="uk-button uk-button-text uk-text-primary" href="javascript:void(0)" id="time"></a>
+        </div>
+	</div>
+    </div>
+	
+	
+	
+	
+	
+	<br/>
+	
+	<!-- author box -->
+	<article class="uk-comment uk-comment-primary" style="display:none" id="author-area">
+		<div>
+			<p class="uk-heading-line uk-text-right  uk-text-meta"><span>About the author</span></p>
+		</div>
+    <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+        <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src="/img/avatar.png" width="80" height="80" alt="" id="author-avatar">
+        </div>
+        <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove">
+				<a class="uk-link-reset uk-text-primary" href="javascript:void(0)" id="author-name"></a>
+				<span id="author-rep" class="uk-badge"></span>
+			</h4>
+			
+			<br/>
+			
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+					<a href="javascript:void(0)" class="uk-text-primary" id="author-account">..</a>
+				</li>
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: history"></span>
+					<a href="javascript:void(0)" class="uk-text-primary" id="author-created">..</a>
+				</li>
+			</ul>
+        </div>
+    </header>
+	
+	<div>
+	
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: pencil"></span>
+					<a href="javascript:void(0)" class="uk-text-primary" id="author-posts">..</a>
+				</li>
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: location"></span>
+					<a href="javascript:void(0)" class="uk-text-primary" id="author-location">..</a>
+				</li>
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: world"></span>
+					<a href="javascript:void(0)" class="uk-text-primary" id="author-website">Website</a>
+				</li>
+                <li>
+					<span class="uk-icon uk-margin-small-right" uk-icon="icon: users"></span>
+					<a href="javascript:void(0)" id="follow" class="uk-text-primary">Follow</a>
+				</li>
+			</ul>
+	</div>
+	
+	<hr/>
+	
+    <div class="uk-comment-body" uk-grid>
+        <div>
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: info">
+			</span>
+			<span id="author-bio" style="word-wrap: break-word">
+			</span>
+		</div>
+    </div>
+	
+	
+	
+	
+	</article>
+	
+	
+	<!-- post actions -->
+	
+	
+	
+	
+	
+		<div class="uk-background-primary uk-light uk-padding uk-panel">
+			<p class="uk-h4">Support authors and help Steem!</p>
+			<p>Steem authors depend on your votes to fund their content creation. If you enjoyed this post, support the author by voting this post. By doing this you also help the Steem Blockchain by curating good content while ensuring that the reward pool is democratically divided. Thank you!</p>
+			<button class="uk-button uk-button-default" id="main-vote-toggle" onClick="votePanelBtn(this.id)" href="javascript:void(0)">
+				<span class="uk-icon uk-margin-small-right" uk-icon="icon: heart"></span>
+				Vote this post
+			</button>
+			<a class="uk-button uk-button-default" id="main-vote-btn" style="display:none;" href="javascript:void(0)">
+				+5%
+			</a>
+		
+	
+			<br/>
+		
+		
+			<div class="slidecontainer uk-grid-margin uk-first-column" id="main-range-div" style="display:none; margin-top: 20px;">
+				<input id="main-range" class="uk-range slider" type="range" min="100" value="500" max="10000">
+			</div>
+		
+        </div>
+		
+		
+		
+    
+	<br/><br/>
+	
+	<div class="uk-grid-small uk-child-width-auto uk-align-right" uk-grid>
+	<div uk-margin>
+        <button class="uk-button uk-button-primary" id="respond-btn" href="javascript:void(0)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: comment"></span>
+			Comment
+		</button>
+        <button class="uk-button uk-button-danger" id="resteem" href="javascript:void(0)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+			Resteem
+		</button>
+	</div>
+    </div>
+	
+	
+	
+		
+		
+		<br/>
+		
+		
+        <div class="uk-margin" id="response-div" style="display:none">
+            <textarea class="uk-textarea" rows="5" id="response" placeholder="Enter your response; MarkDown styling supported."></textarea>
+			<br/>
+			<button class="uk-button uk-button-default" id="publish-res-btn" onClick="addresponse()" >Publish</button>
+        </div>
+		
+		
+		<br/><br/>
+		
+		
+		
+		<!-- comment area -->
+		
+		<h3 class="uk-heading-line"><span id="responses-count"></span></h3>
+		
+		
+		<div id="comments-container">
+			
+			
+		</div>
+		
+		
+		
+	
+	
+
+</article>
+		
+		
+		
+		
+		
+		</div>
+    </div>
+	
+	
+	<!-- sidebar -->
+	
+    <div class="uk-width-1-4@m">
+	
+	<br/>
+	
+	
+	
+		<div id="sidebar"></div>
+		
+		
+	</div>
+	
+	</div>
+	
+	
+	
+		<br/><br/>
+		
+		<hr class="uk-divider-icon">
+	
+			
+	
+	
+	
+	</div>
+	
+	
+	
+	</section>
+	
+	
+	
+
+	
+	
+	
+	<!-- Footer section -->
+	<br/>
+	
+	<section name="footer" id="footer-area" style="visibility:hidden">
+	
+	
+	
+	
+		<div id="footer"></div>
+		
+	
+	</section>
+	
+	
+	
+<script>
+	//
+	
+   $("#navbar").load("/files/navbar.html");		//load the navbar!!!
+   $("#sidebar").load("/files/sidebar.html");		//load the sidebar!!!
+   $("#footer").load("/files/footer.html");		//load the footer!!!
+   
+   
+steem.api.setOptions({ url: 'https://api.steemit.com' });
+	
+	
+	//parse url for author and permlink
+	let articleURL = window.location.pathname;
+	let str = articleURL.substr(articleURL.indexOf("@") + 1);
+	let permlink = str.substr(str.indexOf("/") + 1);
+	////console.log(permlink);
+	let author = str.substring((str.indexOf("@") + 1), (str.indexOf("/")));
+	////console.log(author);
+	
+	
+   
+	var post_category = "";
+	var parent_author = "";
+	var parent_permlink = "";
+	
+	
+	
+var converter = new showdown.Converter({
+    'ghMentions': true,
+    'ghMentionsLink' : '/@{u}'
+});
+
+
+
+var activeU = "";
+
+function readCook(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+
+if(readCook("SC2A") != null) {
+		
+    var aInfo = readCook("SC2A");
+    aInfo = window.atob(aInfo);
+    aInfo = JSON.parse(aInfo);
+	activeU = aInfo.username;
+		
+}
+	
+	
+	
+
+steem.api.getContent(author, permlink, function(err, result) {
+  ////console.log(err, result);
+  if (err) {
+	alert(err);
+	window.location.reload;
+  } else {
+	//displayPost(result);
+	document.title = result.title + " - Steempedia";
+	document.getElementById('article-heading').innerText = result.title;
+	document.getElementById('article-author').innerText = "@" + result.author;
+	document.getElementById('author-rep').innerText = steem.formatter.reputation(result.author_reputation);
+	document.getElementById('author-name').href = "/@" + result.author;
+	document.getElementById('article-author').href = "/@" + result.author;
+	document.getElementById('article-time').innerText = new Date(result.created).toDateString();
+	document.getElementById('time').innerText = new Date(result.created).toDateString();
+	document.getElementById('author-avatar').src = "https://img.busy.org/@" + result.author;
+	document.getElementById('article-category').innerText = result.parent_permlink;
+	document.getElementById('tag').innerText = result.parent_permlink;
+	document.getElementById('article-category').href = "/tags/" + result.parent_permlink;
+	document.getElementById('tag').href = "/tags/" + result.parent_permlink;
+	
+	document.getElementById('earned').innerText = checkCash(result) + " earned";
+	document.getElementById('votes-count').innerText = countVotes(result.active_votes) + " votes";
+	document.getElementById('votes-count').id = result.id + "-voteCount";
+	document.getElementById('comment-count').innerText = result.children + " responses";
+	
+	document.getElementById('main-range-div').id = result.id + "-div";
+	document.getElementById('main-range').id = result.id + "-range";
+	document.getElementById('main-vote-toggle').id = result.id;
+	
+	document.getElementById('resteem').dataset.author = result.author;
+	document.getElementById('resteem').dataset.href = result.permlink;
+	
+	document.getElementById('main-vote-btn').dataset.href = result.permlink;
+	document.getElementById('main-vote-btn').dataset.votestate = "false";
+	document.getElementById('main-vote-btn').dataset.author = result.author;
+	document.getElementById('main-vote-btn').onclick = function() { vote(this.id) };
+	
+	document.getElementById('main-vote-btn').id = result.id + "-btn";
+	
+	
+	
+	//----- Share links
+	document.getElementById('facebook').href = "https://www.facebook.com/sharer/sharer.php?u=" + window.location;
+	
+	document.getElementById('twitter').href = "http://twitter.com/share?text=" + document.title + "&url=" + window.location + "&hashtags=steempedia," + result.category;
+	
+	document.getElementById('google').href = "https://plus.google.com/share?url=" + window.location;
+	
+	document.getElementById('linkedin').href = "https://www.linkedin.com/shareArticle?mini=true&url=" + window.location + "&title=" + encodeURI(result.title) + "&summary=&source=steempedia.com";
+	
+	document.getElementById('tumblr').href = "http://www.tumblr.com/share?v=3&u=" + window.location + "&t=" + document.title;
+	
+	
+	
+	
+	
+	
+	//var converter = new showdown.Converter();
+	var md = result.body;
+	var html = converter.makeHtml(md);
+		
+		
+	document.getElementById('article-body').innerHTML = html;
+	
+	var p = document.getElementById('article-body').getElementsByTagName('p')[0];
+	p.className = "uk-text-lead";
+	
+	
+	$("#article-body").find("*").addBack().contents().filter(function() {
+		return this.nodeType == 3;
+	}).each(function(index, element) {
+		$(element).replaceWith(element.textContent.replace(/(https?:\/\/\S+(\.png|\.jpg|\.gif))/g, '<img src="$1" />'));
+	});
+	
+	
+	
+	if (result.json_metadata) {
+		var metadata = JSON.parse(result.json_metadata);
+		
+		if (metadata.tags) {
+			var tags_markup = '<span class="uk-label uk-margin-small-right">Tagged in:</span>';
+			
+			for (x in metadata.tags) {
+				
+				tags_markup = tags_markup + '<a class="uk-button uk-button-text uk-margin-small-right uk-text-primary" href="/tags/' + metadata.tags[x] + '">' + metadata.tags[x] + '</a>';
+				
+			}
+			
+			document.getElementById('tags').innerHTML = tags_markup;
+			
+		}
+	}
+	
+	document.getElementById('loader-area').style.display = "none";
+	document.getElementById('article-spinner').style.display = "none";
+	document.getElementById('article-area').style.display = "block";
+	document.getElementById('footer-area').style.visibility = "visible";
+
+	
+  }
+  
+  checkVote(result, result.active_votes);
+  
+  
+	
+	post_category = result.parent_permlink;
+	parent_author = result.author;
+	parent_permlink = result.permlink;
+	
+	
+  
+});
+
+
+
+
+steem.api.getAccounts([author], function(err, resp){
+    ////console.log(err, resp);
+	
+	var response = resp[0];
+	
+  
+	document.getElementById('author-posts').innerText = Number(response.post_count).toLocaleString() + " posts";
+	
+	document.getElementById('author-account').innerText = response.name;
+	document.getElementById('author-account').href = "/@" + response.name;
+	document.getElementById('author-created').innerText = new Date(response.created).toDateString();
+	
+	if (response.json_metadata !== undefined) {
+	
+		var m_data = JSON.parse(response.json_metadata);
+	
+		if (m_data.profile.name !== undefined) document.getElementById('author-name').innerText = m_data.profile.name;
+		if (m_data.profile.about !== undefined) document.getElementById('author-bio').innerText = m_data.profile.about;
+		if (m_data.profile.location !== undefined) document.getElementById('author-location').innerText = m_data.profile.location;
+		if (m_data.profile.website !== undefined) document.getElementById('author-website').href = m_data.profile.website;
+	
+	}
+	
+	document.getElementById('author-area').style.display = "block";
+	
+	
+});
+
+
+
+
+steem.api.getContentReplies(author, permlink, function(err, responses) {
+	
+	if (responses.length == 0) responsesReady();
+	
+	document.getElementById("responses-count").innerText = responses.length + " direct responses";
+	
+	responses = responses.sort(function(a, b){return b.net_votes - a.net_votes});
+		
+	for(x in responses) {
+		create_comment(responses[x]);
+	}
+		
+	for (x in responses) {
+		checkResponseVotes(responses[x], responses[x].net_votes);
+			
+		if (x == responses.length-1) {
+			responsesReady();
+			
+		}
+	}
+	
+	
+});
+	
+	
+	
+
+function create_comment(comment) {
+	
+	var article = document.createElement("article");
+	article.className = "uk-comment uk-comment-primary";
+	
+	var hr =  document.createElement("hr");
+	
+	article.appendChild(hr);
+	
+	var header = document.createElement("header");
+	header.className = "uk-comment-header uk-grid-medium uk-flex-middle";
+	header.setAttribute("uk-grid", "");
+	
+	var divImg = document.createElement("div");
+	divImg.className = "uk-width-auto";
+	
+	var img = document.createElement("img");
+	img.className = "uk-comment-avatar uk-border-circle";
+	img.src = "https://img.busy.org/@" + comment.author;
+	img.width = "40";
+	img.height = "40";
+	
+	divImg.appendChild(img);
+	
+	var divMeta = document.createElement("div");
+	divMeta.className = " uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top";
+	
+	var au = document.createElement("a");
+	au.className = "uk-margin-left";
+	au.href = "/@" + comment.author;
+	au.innerText = "@" + comment.author.toUpperCase() + "(" + steem.formatter.reputation(comment.author_reputation) + ")";
+	
+	var a1 = document.createElement("a");
+	a1.href = "#" + response.id;
+	a1.innerText = new Date(comment.created).toDateString();
+	
+	
+	var ul = document.createElement("ui");
+	ul.className = "uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top";
+	
+	var a2 = document.createElement("span");
+	a2.id = comment.id + "-voteCount";
+	a2.innerText = comment.net_votes + " votes";
+	
+	var a3 = document.createElement("span");
+	a3.innerText = "$ " + checkCash(comment);
+	
+	var a4 = document.createElement("a");
+	a4.innerText = "Vote";
+	a4.id = comment.id;
+	a4.onclick = function(e) {e.preventDefault(); votePanelBtn(this.id) }
+	
+	var a5 = document.createElement("a");
+	a5.id = comment.id + "-btn";
+	a5.dataset.value = "500";
+	a5.style.display = "none";
+	a5.innerText = " +5%";
+	a5.dataset.href = comment.permlink;
+	a5.dataset.votestate = "false";
+	a5.dataset.author = comment.author;
+	a5.onclick = function() { vote(this.id) };
+	
+	
+	var slidercontainer = document.createElement("div");
+	slidercontainer.className = "slidecontainer";
+	slidercontainer.style.display = "none";
+	slidercontainer.style.marginTop = "10px";
+	slidercontainer.id = comment.id + "-div";
+	
+	var input = document.createElement("input");
+	input.id = comment.id + "-range";
+	input.className = "uk-range slider";
+	input.type = "range";
+	input.min = "100";
+	input.max = "10000";
+	input.value = "500";
+	
+	slidercontainer.appendChild(input);
+	
+	
+	
+	
+	ul.appendChild(a2);
+	ul.appendChild(a3);
+	ul.appendChild(a4);
+	ul.appendChild(a5);
+	
+	divMeta.appendChild(au);
+	divMeta.appendChild(a1);
+	
+	
+	header.appendChild(divImg);
+	header.appendChild(divMeta);
+	
+	
+	var divBD = document.createElement("div");
+	divBD.className = "uk-comment-body";
+	
+	var p = document.createElement("p");
+	p.innerHTML = converter.makeHtml(comment.body);
+	
+	divBD.appendChild(p);
+	
+	divBD.appendChild(ul);
+	divBD.appendChild(slidercontainer);
+	
+	article.appendChild(header);
+	article.appendChild(divBD);
+	
+	
+	document.getElementById("comments-container").appendChild(article);
+	
+}
+
+
+
+
+
+
+
+
+function countVotes(Votes) {
+
+var unVotes = Votes.reduce(function (n, vot) {
+    return n + (vot.percent == '0');
+}, 0);
+
+////console.log("Number of votes removed is: " + unVotes);
+
+return Votes.length - unVotes;
+}
+
+	
+	
+function checkCash(pst) {
+  
+	return Math.max(Number(pst.pending_payout_value.split(' ')[0]), Number(pst.total_payout_value.split(' ')[0]) + Number(pst.curator_payout_value.split(' ')[0])).toFixed(2);
+ 
+}	
+
+
+
+
+
+function votePanelBtn(eID) {
+	
+	////console.log(eID);
+	
+	if (readCookie("SC2A") == null) { window.location.href = authLink; return ; };
+	
+	var slidrDiv = document.getElementById(eID + "-div");
+	var slidr = document.getElementById(eID + "-range");
+	
+	$("#" + eID + "-div").slideToggle();
+	$("#" + eID + "-btn").toggle();;
+	
+};
+
+	
+	
+
+function checkVote(resp, voteArray) {
+
+	for (x in voteArray) {
+	
+		if (voteArray[x].voter == activeU && voteArray[x].percent > 0) {
+			document.getElementById(resp.id).innerHTML = "Voted at: " + voteArray[x].percent/100 + "%";
+			document.getElementById(resp.id + "-btn").dataset.votestate = "true";
+			document.getElementById(resp.id + "-btn").dataset.value = "0";
+			document.getElementById(resp.id + "-range").value = voteArray[x].percent;
+			document.getElementById(resp.id + "-range").disabled = true;
+			document.getElementById(resp.id + "-btn").innerText = " Unvote";
+		} else {
+			//document.getElementById(resp.id + "-range").value = "500";
+		}
+	}
+
+};
+	
+
+	
+	
+
+function countVotes(Votes) {
+
+var unVotes = Votes.reduce(function (n, vot) {
+    return n + (vot.percent == '0');
+}, 0);
+
+////console.log("Number of votes removed is: " + unVotes);
+
+return Votes.length - unVotes;
+}
+
+
+
+
+	
+function checkResponseVotes(response, netVotes) {
+	
+steem.api.getActiveVotes(response.author, response.permlink, function(err, activeVotes) {
+	
+	if (netVotes > 0) { 
+		document.getElementById(response.id + "-voteCount").innerText = " +" + countVotes(activeVotes) + " votes";
+	} else if (netVotes < 0) {
+		document.getElementById(response.id + "-voteCount").innerText = " -" + countVotes(activeVotes) + " votes";
+	} else if  (netVotes == 0) {
+		document.getElementById(response.id + "-voteCount").innerText = " 0";
+	}
+	
+	checkVote(response, activeVotes);
+	
+});
+
+}
+
+
+
+
+	
+function responsesReady() {
+
+	var slidd = document.getElementsByClassName("slider");
+
+	////console.log("total slidebars are: " + slidd.length);
+
+	for (x in slidd) {
+	slidd[x].oninput = function() {
+
+		//alert(slidd[x].id);	//not responsive so NOT advised
+		//alert(this.id);		//fully responsive so advised
+		
+		////console.log(this.id);
+	
+		activeSlidd = document.getElementById(this.id);
+		activeBtn = document.getElementById(parseInt(this.id) + "-btn");
+	
+		//activeBtn.innerHTML = activeSlidd.value/100 + "%";
+	
+		if (activeBtn.dataset.votestate == 'false') {
+			activeBtn.dataset.value = this.value;
+			activeBtn.innerText = " + " + parseInt(this.value/100) + "%";
+		} else if (activeBtn.dataset.votestate == 'true') {		//no code in this section will work since if the voted state is true, then slider is disabled!
+			//activeBtn.innerHTML = " " + -(this.value/100) + "%";
+			//activeBtn.dataset.value = "0";
+			//activeBtn.innerHTML = " Remove vote";
+		}
+	}
+	}
+	
+}
+
+	
+	
+	
+function vote(elID) {
+
+	
+if (document.getElementById(elID).className.indexOf('disabled') == -1 ){		//this code makes sure that the click only works when the button is NOT disabled
+
+vter = account;
+athor = document.getElementById(elID).dataset.author;
+pmlink = document.getElementById(elID).dataset.href;
+//weight = Number(document.getElementById(parseInt(elID) + "-range").value);  // not recommended since it removes -/negative values
+//weight = parseInt(document.getElementById(parseInt(elID) + "-range").value);
+weight = parseInt(document.getElementById(elID).dataset.value);
+	
+////console.log("voter: " + vter + "\n" + "author is: " + athor + "\n" + "permlink is: " + pmlink + "\n" + "weight is: " + weight);
+	
+	cClass = document.getElementById(elID).className;
+	vClass = cClass + " disabled";
+	
+	document.getElementById(elID).className = vClass;  //disable the button while the OP is in progress
+	document.getElementById(parseInt(elID) + "-range").disabled = true;	//disbale the slider once the OP is in progress
+	
+	
+	
+	
+sc2.vote(vter, athor, pmlink, weight, function (err, reslt) {
+  ////console.log(err, reslt);
+  if (err) {
+	alert(err + "\n" + "Please try again!")
+	document.getElementById(elID).className = cClass;  //re-enable the btn after OP is done
+	
+  } else {
+	////console.log(reslt)
+	document.getElementById(elID).className = cClass;  //re-enable the btn after OP is done
+	
+	if (reslt.result.operations[0][1].weight > 0) {
+		document.getElementById(elID).dataset.votestate = "true";
+		document.getElementById(elID).dataset.value = "0";
+		document.getElementById(elID).innerText = " Unvote";
+		document.getElementById(parseInt(elID)).innerText = "Voted at: " + reslt.result.operations[0][1].weight/100 + "%";
+		
+		document.getElementById(parseInt(elID) + "-voteCount").innerHTML = " " + ((Number(document.getElementById(parseInt(elID) + "-voteCount").innerText.replace(/[^0-9]/g,''))) + 1) + " votes";
+		
+		//document.getElementById(parseInt(elID) + "-range").disabled = true; //disable the slider after a vote is down
+		//console.log("voted successfully");
+	} else /* if (reslt.result.operations[0][1].weight = 0) */ {		// } else if {... does NOT work
+		document.getElementById(elID).dataset.votestate = "false";
+		document.getElementById(elID).dataset.value = "5000";
+		document.getElementById(parseInt(elID) + "-range").disabled = false;	//re-enable the slider when a vote is removed
+		document.getElementById(elID).innerText = " +" + document.getElementById(parseInt(elID) + "-range").value/100 + "%";
+		document.getElementById(parseInt(elID) + "-voteCount").innerHTML = " " + ((Number(document.getElementById(parseInt(elID) + "-voteCount").innerText.replace(/[^0-9]/g,''))) - 1) + " votes";
+		document.getElementById(parseInt(elID)).innerText = " Vote";
+		//console.log("vote removed!");
+	}
+  }
+});
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+$("#respond-btn").click(function(){
+
+	if (readCookie("SC2A") == null) return alert("Login required.")
+
+    $("#response-div").slideToggle();
+	
+});
+
+
+	
+
+
+
+
+ 
+function addresponse() {
+	
+	
+		
+		document.getElementById('publish-res-btn').disabled = true;
+		document.getElementById('response').disabled = true;
+		var message = document.getElementById('response').value;
+		
+		//----toggle close the button, empty its contents and reload the comments area only then enable the disabled onces
+		
+				
+	var tags = post_category;
+
+	
+    var permlink = steem.formatter.commentPermlink(parent_author, parent_permlink);
+	////console.log(parent_author, parent_permlink, activeU, permlink, '', message, '');
+	
+	
+	sc2.comment(parent_author, parent_permlink, activeU, permlink, '', message, '', function(err, result) {
+		//console.log(result);
+		
+		if (err) {
+			nErr = JSON.stringify(err.error_description);
+			
+			document.getElementById('response').disabled = false;
+			document.getElementById('publish-res-btn').disabled = false;
+					
+			////console.log(nErr);
+			
+				if (nErr.indexOf("The comment is archived") > -1)
+					return alert("Post with the same permlink already exists and is archived, please change your permlink.");
+					
+					
+				if (nErr.indexOf("You may only post once every 5") > -1)
+					return alert("You may only post once every five minutes!");
+					
+					
+		
+					return;
+				
+						
+			//throw err;
+			alert('Failure! ' + err);
+			
+		}  else {
+			
+			
+			//alert('Success!');
+			
+			///---------------------------------------call the function to reload the comments instead of reloading the whole page
+			
+			
+			
+			steem.api.getContent(activeU, permlink, function(err, result) {
+				//console.log(err, result);
+				
+				$("#response-div").slideToggle("slow");
+				document.getElementById('publish-res-btn').disabled = false;
+				document.getElementById('response').disabled = false;
+				document.getElementById('response').value = "";
+		
+				create_comment(result);
+				responsesReady();
+				
+				var tAnchor = "#" +  result.id;
+					
+					$('html, body').animate({
+					scrollTop: $(tAnchor).offset().top
+					}, 1000);
+					
+					//$('#item-' + result.id).animate({backgroundColor: '#CD3333'}, 'slow'); 			//NOT working!!!
+					
+			});
+	
+		}
+		
+	
+	});
+	
+	
+	
+}
+
+
+$("#resteem").click(function(){
+	
+	if (readCookie("SC2A") == null) { window.location.href = authLink; return ; };
+	
+	document.getElementById('resteem').disabled = "true";
+	
+	sc2.reblog(account, this.dataset.author, this.dataset.href, function (err, rRes) {
+		//console.log(err, rRes);
+		
+		if (err) {
+	
+				nErr = JSON.stringify(err);
+			
+				if (nErr.indexOf("Account has already re-blogged this post") > -1) {
+					//console.log("Already re-blogged");
+				};
+			
+			} else {
+			//console.log("Resteemed!");
+		}
+	
+	
+	});
+
+
+});
+
+		
+
+$("#follow").click(function(){
+	
+	if (readCookie("SC2A") == null) { window.location.href = authLink; return ; };
+	
+	document.getElementById('follow').disabled = "true";
+	
+	sc2.follow(account, author, function (err, res) {
+		console.log(err, res)
+	});
+
+
+
+});
+
+		
+
+
+
+	
+</script>
+	
+    </body>
+</html>

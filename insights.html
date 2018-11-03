@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insights on Steem Blockchain - Steempedia</title>
+		
+		
+		
+		<meta name="description" content="Explore Blockchain data properties, config and stats of the Steem Blockchain.">
+		<meta name="keywords" content="steempedia, steempedia.com, steempedia apps, steem price, steem blockchain, steem details, steemit.com, steemit, steemit apps, steem services, steem, steemit, steem blockchain, publish article, paid blogging, cryptocurrency, steem dollars, smart media tokens, blockchain powered blog, news, make money online, work at home, bitcoin, blockchain">
+		<meta name="application-name" content="Steempedia">
+		
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Steempedia">
+		<meta property="og:title" content="Insights on Steem Blockchain - Steempedia">
+		<meta property="og:description" content="Explore Blockchain data properties, config and stats of the Steem Blockchain.">
+		<meta property="og:image" content="https://www.steempedia.com/img/steempedia.png">
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@steempedia">
+		<meta name="twitter:title" content="Insights on Steem Blockchain - Steempedia">
+		<meta name="twitter:description" content="Explore Blockchain data properties, config and stats of the Steem Blockchain.">
+		
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+		
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		
+		
+		
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css" />
+	
+		<!-- UIkit JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/js/uikit-icons.min.js"></script>
+		
+		<script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		
+		<script src="/scripts/sc2.min.js"></script>
+		
+    </head>
+    <body>
+	
+		<div id="navbar"></div>
+	
+	
+	
+	
+	
+	
+	
+	<section name="loader" style="display:block; margin-top:50px; margin-bottom:50px" id="loader-area">
+	
+	<div class="uk-container">
+	
+			<div style="margin-left:50%" class="" uk-spinner></div>
+		
+	
+	</div>	
+	
+	</section>
+	
+	
+	
+	<section name="content" id="content-section" style="display:none">
+	
+	<div class="uk-section" id="content-section" style="">
+		<div class="uk-container">
+		
+		
+		
+		
+			
+			<h3 class="uk-heading-bullet">Basic insights</h3>
+			
+					
+				<br/><br/>
+		
+					
+					<div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
+					
+					
+    <div style="visibility:hidden" id="account-count-div">
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-border-circle">
+            <h3 class="uk-card-title">Total accounts</h3>
+			<hr/>
+            <p id="account-count"></p>
+        </div>
+    </div>
+	
+    <div style="visibility:hidden" id="market-cap-div">
+        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-circle">
+            <h3 class="uk-card-title">Market Cap</h3>
+			<hr/>
+            <p id="market-cap"></p>
+        </div>
+    </div>
+	
+    <div style="visibility:hidden" id="reward-pool-div">
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-border-circle">
+            <h3 class="uk-card-title">Reward pool</h3>
+			<hr/>
+            <p id="reward-pool"></p>
+        </div>
+    </div>
+    <div style="visibility:hidden" id="top-tag-div">
+        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-circle">
+            <h3 class="uk-card-title">Top tag</h3>
+			<hr/>
+            <p id="top-tag"></p>
+        </div>
+    </div>	
+	
+    <div style="visibility:hidden" id="current-supply-div">
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-border-circle">
+            <h3 class="uk-card-title">Current supply</h3>
+			<hr/>
+            <p id="current-supply"></p>
+        </div>
+    </div>
+	
+    <div style="visibility:hidden" id="median-price-div">
+        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-circle">
+            <h3 class="uk-card-title">Median price</h3>
+			<hr/>
+            <p id="median-price"></p>
+        </div>
+    </div>
+	
+    <div style="visibility:hidden" id="current-witness-div">
+        <div class="uk-card uk-card-default uk-card-hover uk-card-body uk-border-circle">
+            <h3 class="uk-card-title">Current witness</h3>
+			<hr/>
+            <p id="current-witness"></p>
+        </div>
+    </div>
+	
+    <div style="visibility:hidden" id="average-block-size-div">
+        <div class="uk-card uk-card-primary uk-card-hover uk-card-body uk-light uk-border-circle">
+            <h3 class="uk-card-title">Avg. block size</h3>
+			<hr/>
+            <p id="average-block-size"></p>
+        </div>
+    </div>
+					
+					
+					</div>
+			
+					
+				<br/><br/>
+		
+	
+		
+		<hr class="uk-divider-icon">
+	
+			
+		</div>
+	</div>
+	
+	
+	</section>
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	<section name="network info" id="network-section" style="display:none">
+	
+	
+					
+	
+	<div class="uk-container">
+	
+			<br/>
+		
+			<h3 class="uk-heading-bullet">Network</h3>
+			<br/><br/>
+			
+			
+	
+	<div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+	<!-- Economy -->
+    <div>
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>Economy</span></h3>
+			<div>
+				<span class="uk-label">sdb_to_steem</span>
+				<span class="uk-text-primary" id="price_feed"></span>
+			</div>
+			<div>
+				<span class="uk-label">market_cap</span>
+				<span class="uk-text-primary" id="market_cap"></span>
+			</div>
+			<div>
+				<span class="uk-label">current_supply</span>
+				<span class="uk-text-primary" id="current_supply"></span>
+			</div>
+			<div>
+				<span class="uk-label">current_sbd_supply</span>
+				<span class="uk-text-primary" id="current_sbd_supply"></span>
+			</div>
+			<div>
+				<span class="uk-label">total_vesting_fund_steem</span>
+				<span class="uk-text-primary" id="total_vesting_fund_steem"></span>
+			</div>
+			<div>
+				<span class="uk-label">virtual_supply</span>
+				<span class="uk-text-primary" id="virtual_supply"></span>
+			</div>
+			<div>
+				<span class="uk-label">sbd_print_rate</span>
+				<span class="uk-text-primary" id="sbd_print_rate"></span>
+			</div>
+			<div>
+				<span class="uk-label">vote_power_reserve_rate</span>
+				<span class="uk-text-primary" id="vote_power_reserve_rate"></span>
+			</div>
+        </div>
+    </div>
+	<!-- Blockchain -->
+    <div>
+        <div class="uk-card uk-card-primary uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>Blockchain</span></h3>
+			<div>
+				<span class="uk-label">account_count</span>
+				<span class="uk-text-primary" id="account_count"></span>
+			</div>
+			<div>
+				<span class="uk-label">INFLATION_RATE_STOP_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_INFLATION_RATE_STOP_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">maximum_block_size</span>
+				<span class="uk-text-primary" id="maximum_block_size"></span>
+			</div>
+			<div>
+				<span class="uk-label">current_reserve_ratio</span>
+				<span class="uk-text-primary" id="current_reserve_ratio"></span>
+			</div>
+			<div>
+				<span class="uk-label">account_creation_fee</span>
+				<span class="uk-text-primary" id="account_creation_fee"></span>
+			</div>
+			<div>
+				<span class="uk-label">last_irreversible_block_num</span>
+				<span class="uk-text-primary" id="last_irreversible_block_num"></span>
+			</div>
+			<div>
+				<span class="uk-label">head_block_number</span>
+				<span class="uk-text-primary" id="head_block_number"></span>
+			</div>
+			<div>
+				<span class="uk-label">current_aslot</span>
+				<span class="uk-text-primary" id="current_aslot"></span>
+			</div>
+			<div>
+				<span class="uk-label">time</span>
+				<span class="uk-text-primary" id="time"></span>
+			</div>
+        </div>
+    </div>
+	<!-- Witness -->
+    <div>
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>Witness</span></h3>
+			<div>
+				<span class="uk-label">current_witness</span>
+				<span class="uk-text-primary" id="current_witness"></span>
+			</div>
+			<div>
+				<span class="uk-label">num_pow_witnesses</span>
+				<span class="uk-text-primary" id="num_pow_witnesses"></span>
+			</div>
+			<div>
+				<span class="uk-label">participation_count</span>
+				<span class="uk-text-primary" id="participation_count"></span>
+			</div>
+			<div>
+				<span class="uk-label">total_pow</span>
+				<span class="uk-text-primary" id="total_pow"></span>
+			</div>
+			<div>
+				<span class="uk-label">hardfork_required_witnesses</span>
+				<span class="uk-text-primary" id="STEEMIT_HARDFORK_REQUIRED_WITNESSES"></span>
+			</div>
+			<div>
+				<span class="uk-label">MAX_WITNESS_URL_LENGTH</span>
+				<span class="uk-text-primary" id="STEEMIT_MAX_WITNESS_URL_LENGTH"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCKCHAIN_HARDFORK_VERSION</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCKCHAIN_HARDFORK_VERSION"></span>
+			</div>
+			<div>
+				<span class="uk-label">MAX_WITNESSES</span>
+				<span class="uk-text-primary" id="STEEMIT_MAX_WITNESSES"></span>
+			</div>
+			<div>
+				<span class="uk-label">MINER_ACCOUNT</span>
+				<span class="uk-text-primary" id="STEEMIT_MINER_ACCOUNT"></span>
+			</div>
+        </div>
+    </div>
+	
+	<!-- Reward -->
+    <div>
+        <div class="uk-card uk-card-primary uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>Reward</span></h3>
+			<div>
+				<span class="uk-label">CONTENT_REWARD_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_CONTENT_REWARD_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">CURATE_APR_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_CURATE_APR_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">MAX_VOTE_CHANGES</span>
+				<span class="uk-text-primary" id="STEEMIT_MAX_VOTE_CHANGES"></span>
+			</div>
+			<div>
+				<span class="uk-label">CONTENT_APR_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_CONTENT_APR_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">MINING_REWARD</span>
+				<span class="uk-text-primary" id="STEEMIT_MINING_REWARD"></span>
+			</div>
+			<div>
+				<span class="uk-label">MIN_CONTENT_REWARD</span>
+				<span class="uk-text-primary" id="STEEMIT_MIN_CONTENT_REWARD"></span>
+			</div>
+			<div>
+				<span class="uk-label">MIN_CURATE_REWARD</span>
+				<span class="uk-text-primary" id="STEEMIT_MIN_CURATE_REWARD"></span>
+			</div>
+			<div>
+				<span class="uk-label">MINER_PAY_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_MINER_PAY_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">MIN_LIQUIDITY_REWARD</span>
+				<span class="uk-text-primary" id="STEEMIT_MIN_LIQUIDITY_REWARD"></span>
+			</div>
+        </div>
+    </div>
+	<!-- Config -->
+    <div>
+        <div class="uk-card uk-card-default uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>Config</span></h3>
+			<div>
+				<span class="uk-label">MAX_ACCOUNT_WITNESS_VOTES</span>
+				<span class="uk-text-primary" id="STEEMIT_MAX_ACCOUNT_WITNESS_VOTES"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCKCHAIN_VERSION</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCKCHAIN_VERSION"></span>
+			</div>
+			<div>
+				<span class="uk-label">MAX_UNDO_HISTORY</span>
+				<span class="uk-text-primary" id="STEEMIT_MAX_UNDO_HISTORY"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCKCHAIN_PRECISION_DIGITS</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCKCHAIN_PRECISION_DIGITS"></span>
+			</div>
+			<div>
+				<span class="uk-label">VOTE_REGENERATION_SECONDS</span>
+				<span class="uk-text-primary" id="STEEMIT_VOTE_REGENERATION_SECONDS"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCK_INTERVAL</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCK_INTERVAL"></span>
+			</div>
+			<div>
+				<span class="uk-label">100_PERCENT</span>
+				<span class="uk-text-primary" id="STEEMIT_100_PERCENT"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCKS_PER_HOUR</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCKS_PER_HOUR"></span>
+			</div>
+			<div>
+				<span class="uk-label">BLOCKS_PER_DAY</span>
+				<span class="uk-text-primary" id="STEEMIT_BLOCKS_PER_DAY"></span>
+			</div>
+        </div>
+    </div>
+	<!-- History -->
+    <div>
+        <div class="uk-card uk-card-primary uk-card-small uk-card-body">
+			<h3 class="uk-heading-line"><span>History</span></h3>
+			<div>
+				<span class="uk-label">GENESIS_TIME</span>
+				<span class="uk-text-primary" id="STEEMIT_GENESIS_TIME"></span>
+			</div>
+			<div>
+				<span class="uk-label">INIT_MINER_NAME</span>
+				<span class="uk-text-primary" id="STEEMIT_INIT_MINER_NAME"></span>
+			</div>
+			<div>
+				<span class="uk-label">ADDRESS_PREFIX</span>
+				<span class="uk-text-primary" id="STEEMIT_ADDRESS_PREFIX"></span>
+			</div>
+			<div>
+				<span class="uk-label">MINING_TIME</span>
+				<span class="uk-text-primary" id="STEEMIT_MINING_TIME"></span>
+			</div>
+			<div>
+				<span class="uk-label">NULL_ACCOUNT</span>
+				<span class="uk-text-primary" id="STEEMIT_NULL_ACCOUNT"></span>
+			</div>
+			<div>
+				<span class="uk-label">NUM_INIT_MINERS</span>
+				<span class="uk-text-primary" id="STEEMIT_NUM_INIT_MINERS"></span>
+			</div>
+			<div>
+				<span class="uk-label">START_VESTING_BLOCK</span>
+				<span class="uk-text-primary" id="STEEMIT_START_VESTING_BLOCK"></span>
+			</div>
+			<div>
+				<span class="uk-label">START_MINER_VOTING_BLOCK</span>
+				<span class="uk-text-primary" id="STEEMIT_START_MINER_VOTING_BLOCK"></span>
+			</div>
+			<div>
+				<span class="uk-label">ORIGINAL_MIN_ACCOUNT_CREATION_FEE</span>
+				<span class="uk-text-primary" id="STEEMIT_ORIGINAL_MIN_ACCOUNT_CREATION_FEE"></span>
+			</div>
+        </div>
+    </div>
+	</div>
+	
+	
+	
+		<br/><br/>
+		
+		<hr class="uk-divider-icon">
+	
+	
+	</div>
+	
+	
+	</section>
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+	
+	
+		
+	<section name="apps info" id="sponsored-section" style="display:none">
+	
+	
+	<div class="uk-container">
+	
+	
+			<h3 class="uk-heading-bullet">Sponsored</h3>
+			<br/><br/>
+			
+	
+	<div class="uk-child-width-1-3@m" uk-grid>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemit">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steemit</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Explore Steem Content</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemcenterwiki">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem Center</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Wikipedia for Steem</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemtools">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem Tools</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Explore Steem apps</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@utopian-io">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Utopian</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Reward open source</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@esteem">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">eSteem</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Mobile app for Steem</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@dtube">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">D.Tube</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Video on Steem!</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@asksteem">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Ask Steem</h3>
+							<p class="uk-text-meta uk-margin-remove-top">#1 Steem search engine</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemsql">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem SQL</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Steem as DB service</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemdb">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem DB</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Advanced Steem explorer</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+   
+</div>
+
+
+	
+		<br/><br/>
+		
+		<hr class="uk-divider-icon">
+	
+		
+		
+	
+		
+	</div>
+	
+	
+	</section>
+	
+	
+	
+	
+	
+	
+	
+	<section id="footer-section" style="display:none">
+	
+		<div id="footer"></div>
+		
+	<section>
+	
+	
+	
+	<script>
+	
+   $("#navbar").load("/files/navbar.html");		//load the navbar!!!
+   $("#footer").load("/files/footer.html");		//load the footer!!!
+   
+   
+   
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
+	
+	
+	steem.api.getAccountCount(function(err, result) {
+		//console.log(err, result);
+		document.getElementById('loader-area').style.display = "none";
+		document.getElementById('content-section').style.display = "block";
+		document.getElementById('footer-section').style.display = "block";
+		
+		document.getElementById('account-count').innerText = result.toLocaleString();
+		document.getElementById('account-count-div').style.visibility = "visible";
+	});
+	
+	steem.api.getRewardFund('post', function(err, result) {
+		//console.log(err, result);
+		document.getElementById('reward-pool').innerText = result.reward_balance;
+		document.getElementById('reward-pool-div').style.visibility = "visible";
+	});
+	
+	
+	steem.api.getTrendingTags("", 2, function(err, result) {
+		////console.log(err, result);
+		document.getElementById('top-tag').innerText = result[1].name;
+		document.getElementById('top-tag-div').style.visibility = "visible";
+	});
+	
+	var pric = "";
+	
+	steem.api.getCurrentMedianHistoryPrice(function(err, result) {
+		//console.log(err, result);
+		document.getElementById('median-price').innerText = result.base;
+		document.getElementById('median-price-div').style.visibility = "visible";
+		pric = result.base;
+	
+	
+		steem.api.getDynamicGlobalProperties(function(err, result) {
+			//console.log(err, result);
+		
+			var mCap = parseInt(result.current_supply.split(' ')[0] * pric.split(' ')[0]);
+			var marketCap = "$" + mCap.toLocaleString();
+			document.getElementById('market-cap').innerText = marketCap;
+			document.getElementById('market-cap-div').style.visibility = "visible";
+		
+			document.getElementById('current-witness').innerText = result.current_witness;
+			document.getElementById('current-witness-div').style.visibility = "visible";
+			document.getElementById('current-supply').innerText = result.current_supply;
+			document.getElementById('current-supply-div').style.visibility = "visible";
+			document.getElementById('average-block-size').innerText = result.average_block_size.toLocaleString();
+			document.getElementById('average-block-size-div').style.visibility = "visible";
+	
+		});
+	
+				document.getElementById('sponsored-section').style.display = "block";
+			
+	});
+	
+	
+	
+  
+steem.api.getConfig(function(err, result) {
+  //console.log(err, result);
+  
+	
+	document.getElementById("STEEMIT_MAX_WITNESS_URL_LENGTH").innerText = result.STEEMIT_MAX_WITNESS_URL_LENGTH;
+	document.getElementById("STEEMIT_MAX_ACCOUNT_WITNESS_VOTES").innerText = result.STEEMIT_MAX_ACCOUNT_WITNESS_VOTES;
+	document.getElementById("STEEMIT_BLOCKCHAIN_VERSION").innerText = result.STEEMIT_BLOCKCHAIN_VERSION;
+	document.getElementById("STEEMIT_CONTENT_REWARD_PERCENT").innerText = result.STEEMIT_CONTENT_REWARD_PERCENT;
+	document.getElementById("STEEMIT_GENESIS_TIME").innerText = result.STEEMIT_GENESIS_TIME;
+	document.getElementById("STEEMIT_MAX_VOTE_CHANGES").innerText = result.STEEMIT_MAX_VOTE_CHANGES;
+	document.getElementById("STEEMIT_MAX_UNDO_HISTORY").innerText = result.STEEMIT_MAX_UNDO_HISTORY;
+	document.getElementById("STEEMIT_BLOCKCHAIN_PRECISION_DIGITS").innerText = result.STEEMIT_BLOCKCHAIN_PRECISION_DIGITS;
+	document.getElementById("STEEMIT_BLOCK_INTERVAL").innerText = result.STEEMIT_BLOCK_INTERVAL;
+	document.getElementById("STEEMIT_100_PERCENT").innerText = result.STEEMIT_100_PERCENT;
+	document.getElementById("STEEMIT_BLOCKS_PER_HOUR").innerText = result.STEEMIT_BLOCKS_PER_HOUR;
+	document.getElementById("STEEMIT_BLOCKS_PER_DAY").innerText = result.STEEMIT_BLOCKS_PER_DAY;
+	document.getElementById("STEEMIT_CURATE_APR_PERCENT").innerText = result.STEEMIT_CURATE_APR_PERCENT;
+	document.getElementById("STEEMIT_CONTENT_APR_PERCENT").innerText = result.STEEMIT_CONTENT_APR_PERCENT;
+	document.getElementById("STEEMIT_MINING_REWARD").innerText = result.STEEMIT_MINING_REWARD;
+	document.getElementById("STEEMIT_MIN_CONTENT_REWARD").innerText = result.STEEMIT_MIN_CONTENT_REWARD;
+	document.getElementById("STEEMIT_MIN_CURATE_REWARD").innerText = result.STEEMIT_MIN_CURATE_REWARD;
+	document.getElementById("STEEMIT_MINER_PAY_PERCENT").innerText = result.STEEMIT_MINER_PAY_PERCENT;
+	document.getElementById("STEEMIT_INIT_MINER_NAME").innerText = result.STEEMIT_INIT_MINER_NAME;
+	document.getElementById("STEEMIT_ADDRESS_PREFIX").innerText = result.STEEMIT_ADDRESS_PREFIX;
+	document.getElementById("STEEMIT_MINING_TIME").innerText = result.STEEMIT_MINING_TIME;
+	document.getElementById("STEEMIT_NULL_ACCOUNT").innerText = result.STEEMIT_NULL_ACCOUNT;
+	document.getElementById("STEEMIT_NUM_INIT_MINERS").innerText = result.STEEMIT_NUM_INIT_MINERS;
+	document.getElementById("STEEMIT_START_VESTING_BLOCK").innerText = result.STEEMIT_START_VESTING_BLOCK;
+	document.getElementById("STEEMIT_START_MINER_VOTING_BLOCK").innerText = result.STEEMIT_START_MINER_VOTING_BLOCK;
+	document.getElementById("STEEMIT_ORIGINAL_MIN_ACCOUNT_CREATION_FEE").innerText = result.STEEMIT_ORIGINAL_MIN_ACCOUNT_CREATION_FEE;
+	document.getElementById("STEEMIT_VOTE_REGENERATION_SECONDS").innerText = result.STEEMIT_VOTE_REGENERATION_SECONDS;
+	document.getElementById("STEEMIT_MIN_LIQUIDITY_REWARD").innerText = result.STEEMIT_MIN_LIQUIDITY_REWARD;
+	document.getElementById("STEEMIT_MAX_WITNESSES").innerText = result.STEEMIT_MAX_WITNESSES;
+	document.getElementById("STEEMIT_HARDFORK_REQUIRED_WITNESSES").innerText = result.STEEMIT_HARDFORK_REQUIRED_WITNESSES;
+	document.getElementById("STEEMIT_BLOCKCHAIN_HARDFORK_VERSION").innerText = result.STEEMIT_BLOCKCHAIN_HARDFORK_VERSION;
+	document.getElementById("STEEMIT_MINER_ACCOUNT").innerText = result.STEEMIT_MINER_ACCOUNT;
+	document.getElementById("STEEMIT_INFLATION_RATE_STOP_PERCENT").innerText = result.STEEMIT_INFLATION_RATE_STOP_PERCENT;
+
+	
+//call first API
+steem.api.getDynamicGlobalProperties(function(err, result) {
+
+
+
+	var totalAccounts = "";
+	var marketCap = "";
+	var currentPrice = "";
+	var currentWitness = "";
+	var hfVersion = "";
+	var accountCreationFee = "";
+	var virtualSupply = "";
+	var votePowerReserveRatio = "";
+	var currentSDBSupply = "";
+	var currentSupply = "";
+	var maxBlockSize = "";
+	var currentBlock = "";
+	var time = "";
+	var powWitnesses = "";
+	
+	
+	
+	
+	document.getElementById("current_aslot").innerText = result.current_aslot;
+	document.getElementById("current_sbd_supply").innerText = result.current_sbd_supply;
+	document.getElementById("current_supply").innerText = result.current_supply;
+	document.getElementById("current_witness").innerText = result.current_witness;
+	document.getElementById("head_block_number").innerText = result.head_block_number;
+	document.getElementById("last_irreversible_block_num").innerText = result.last_irreversible_block_num;
+	document.getElementById("maximum_block_size").innerText = result.maximum_block_size;
+	document.getElementById("num_pow_witnesses").innerText = result.num_pow_witnesses;
+	document.getElementById("participation_count").innerText = result.participation_count;
+	document.getElementById("sbd_print_rate").innerText = result.sbd_print_rate;
+	document.getElementById("time").innerText = result.time;
+	document.getElementById("total_pow").innerText = result.total_pow;
+	document.getElementById("total_vesting_fund_steem").innerText = result.total_vesting_fund_steem;
+	document.getElementById("virtual_supply").innerText = result.virtual_supply;
+	document.getElementById("vote_power_reserve_rate").innerText = result.vote_power_reserve_rate;
+	document.getElementById("current_reserve_ratio").innerText = result.current_reserve_ratio;
+	
+	
+	
+	
+  ////console.log(err, result);
+  
+  
+  
+  currentWitness = result.current_witness;
+  time = result.time;
+  virtualSupply = result.virtual_supply;
+  powWitnesses = result.num_pow_witnesses;
+  currentSupply = result.current_supply;
+
+  	//call second API
+	steem.api.getFeedHistory(function(err, result) {
+	////console.log(err, result);
+  
+	currentPrice = result.current_median_history.base;
+	priceHistory = result.price_history;
+	document.getElementById('price_feed').innerText = currentPrice;
+	
+		//call third API
+		steem.api.getChainProperties(function(err, result) {
+			////console.log(err, result);
+			document.getElementById('account_creation_fee').innerText = result.account_creation_fee;
+			maxBlockSize = result.maximum_block_size;
+			var mCap = parseInt(currentSupply.split(' ')[0] * currentPrice.split(' ')[0]);
+			marketCap = "$" + mCap.toLocaleString();
+			document.getElementById('market_cap').innerText = marketCap;
+			
+			//call fourth API
+			steem.api.getAccountCount(function(err, result) {
+				////console.log(err, result);
+				totalAccounts = result;
+				document.getElementById('account_count').innerText = totalAccounts.toLocaleString();
+				document.getElementById('network-section').style.display = "block";
+				
+			});
+
+		});
+		
+	});
+	
+});
+
+  	
+});
+
+
+	
+	</script>
+    </body>
+</html>

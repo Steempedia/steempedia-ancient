@@ -1,0 +1,456 @@
+
+
+
+
+<style>
+
+@media (min-width:320px)  {
+	/* smartphones, iPhone, portrait 480x320 phones */ 
+	.mobile-view {display:block !important;}
+	.tablet-view {display:none !important;}
+	.desktop-view {display:none !important;}
+}
+
+@media (min-width:481px)  {
+	/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+	.mobile-view {display:block !important;}
+	.tablet-view {display:none !important;}
+	.desktop-view {display:none !important;}
+}
+
+@media (min-width:1025px) {
+	/* big landscape tablets, laptops, and desktops */
+	.mobile-view {display:none !important;}
+	.tablet-view {display:block !important;}
+	.desktop-view {display:block !important;}
+}
+
+@media (min-width:1281px) {
+	/* hi-res laptops and desktops */
+	.mobile-view {display:none !important;}
+	.tablet-view {display:block !important;}
+	.desktop-view {display:block !important;}
+}
+
+
+</style>
+
+
+
+
+
+
+
+<div class="tm-header" uk-header="">
+
+
+        <div uk-sticky="" show-on-up="" animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container" class="uk-sticky" style="">
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container">
+                <nav class="uk-navbar">
+                    
+                    
+        <div class="uk-navbar-left">
+
+            
+<ul class="uk-navbar-nav">
+
+		<li class="uk-active desktop-view">
+			<a class="uk-logo" href="/">
+				<img src="/img/steempedia.png" style="height:40px" alt="">
+				<span class="tablet-view">Steempedia(PoC)</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/market" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon: play"></span>
+				<span class="tablet-view">Market</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/news" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon:  video-camera"></span>
+				<span class="tablet-view">News</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/insights" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon: search"></span>
+				<span class="tablet-view">Insights</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/apps" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon: list"></span>
+				<span class="tablet-view">Apps</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/discover" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon: rss"></span>
+				<span class="tablet-view">Discover</span>
+			</a>
+		</li>
+		<li class="desktop-view">
+			<a href="/explore" class=" menu-item">
+				<span class="uk-margin-small-right" uk-icon="icon: info"></span>
+				<span class="tablet-view">Explore</span>
+			</a>
+		</li>
+		<li class="mobile-view">
+		
+            <a>
+				<span uk-navbar-toggle-icon></span>
+				<span class="uk-margin-small-left">Steempedia</span>
+			</a>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li>
+						<a href="/"><span class="uk-margin-small-right" uk-icon="icon: home"></span><span>Home</span></a>
+					</li>
+                    <li>
+						<a href="/market"><span class="uk-margin-small-right" uk-icon="icon: play"></span><span>Market</span></a>
+					</li>
+                    <li>
+						<a href="/news"><span class="uk-margin-small-right" uk-icon="icon:  video-camera"></span><span>News</span></a>
+					</li>
+                    <li>
+						<a href="/insights"><span class="uk-margin-small-right" uk-icon="icon: search"></span><span>Insights</span></a>
+					</li>
+                    <li>
+						<a href="/apps"><span class="uk-margin-small-right" uk-icon="icon: list"></span><span>Apps</span></a>
+					</li>
+                    <li>
+						<a href="/discover"><span class="uk-margin-small-right" uk-icon="icon: rss"></span><span>Discover</span></a>
+					</li>
+                    <li>
+						<a href="/explore"><span class="uk-margin-small-right" uk-icon="icon: info"></span><span>Explore</span></a>
+					</li>
+                </ul>
+            </div>
+			
+		</li>
+		
+</ul>
+                        
+                        
+            </div>
+			
+			
+			
+			
+			
+			
+    <div class="uk-navbar-right">
+
+        <ul class="uk-navbar-nav">
+			<li class="">
+				<a class="menu-item" uk-icon="icon: sign-in" id="login_btn" style="display:none"> Login</a>
+			</li>
+			<li class="">
+				
+		
+            <a id="account-options" style="display:none">
+				<img src="/img/steempedia.png" class="uk-border-circle" style="height:30px" id="user-img" alt="">
+				<span class="uk-margin-small-left desktop-view" id="user-account"></span>
+			</a>
+            <div uk-dropdown>
+                <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li>
+						<a href="/publish"><span class="uk-margin-small-right" uk-icon="icon:  pencil"></span><span>Write</span></a>
+					</li>
+                    <li>
+						<a id="account-link"><span class="uk-margin-small-right" uk-icon="icon: user"></span><span>Account</span></a>
+					</li>
+                    <li>
+						<a id="account-feed"><span class="uk-margin-small-right" uk-icon="icon: rss"></span><span>Feed</span></a>
+					</li>
+                    <li>
+						<a id="account-wallet"><span class="uk-margin-small-right" uk-icon="icon: credit-card"></span><span>Wallet</span></a>
+					</li>
+                    <li>
+						<a onClick="logOut()"><span class="uk-margin-small-right" uk-icon="icon: sign-out"></span><span>Log out</span></a>
+					</li>
+                </ul>
+            </div>
+			</li>
+        </ul>
+
+    </div>
+
+			
+			
+			
+			
+                    
+                </nav>
+				
+            </div>
+
+        </div>
+
+        </div>
+		
+		<div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;" hidden=""></div>
+    
+
+
+
+
+</div>
+
+	
+			
+			
+			 
+<script>
+	//
+	
+	
+	//------- Set the "active" class to the active page
+	
+	var path = window.location.pathname;
+	//var page = path.substr(path.indexOf("/") + 1);
+	
+	////console.log(path);
+	
+	
+	
+	//console.log(window.location.search);
+
+
+	
+//general authentication system for all pages
+
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
+	
+	
+	
+	
+var urlParams = "";
+var state = window.location.href;
+var cook = false;
+var isAuth;
+var returned_state = "";
+	
+	
+	
+sc2.init({
+  
+  //baseURL: 'https://v2.steemconnect.com',
+  app: 'steempedia.app',
+  callbackURL: window.location.protocol + "//" + window.location.hostname + "/me",
+  accessToken: '',
+  scope: ['vote', 'comment', 'custom_json']
+  
+});
+
+
+
+  
+	let activeUser = "";
+	var authLink = sc2.getLoginURL(state);
+	var account = "";
+	////console.log(authLink);
+	
+	document.getElementById('login_btn').href = authLink;
+
+
+
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+
+
+function deleteCookie() {
+	////console.log("current cookie is: " + document.cookie.substring(15));
+	
+    var exp= 1;
+    
+    var d = new Date();
+    d.setTime(d.getTime() - (exp*24*60*60*1000));
+    var expT = "expires="+d.toUTCString();
+    document.cookie = "SC2A" + "=" + ";" + expT + "; path=/;";
+	////console.log("done");
+	////console.log(document.cookie);
+	
+	return true;
+}
+  
+
+function newCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+	
+	
+function setCookie(nom, str, sec) {
+    var d = new Date();
+    d.setTime(d.getTime() + (sec*1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = nom + "=" + str + " ; " + expires;
+    if(readCookie("SC2A") != null)
+        return true;
+}
+  
+	
+	
+	
+	
+	
+	//set auth
+	
+function setAuth() {
+	
+		var urlParams;
+		
+		var match,
+			pl     = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+			query  = window.location.search.substring(1);
+
+			var urlParams = {};
+		while (match = search.exec(query))
+			urlParams[decode(match[1])] = decode(match[2]);
+			
+			
+			
+			
+	
+    var authObject = {access_token : urlParams.access_token, username : urlParams.username};
+    var authString = JSON.stringify(authObject);
+    authString = window.btoa(authString);	//only to obstruct the auth token from literal rendering - hackers please keep your hands off!!!
+	returned_state = urlParams.state;
+	var cookieName = "SC2A";
+    
+    if(setCookie(cookieName, authString, urlParams.expires_in)) return true;
+	
+}
+	
+	
+	
+	
+	
+	//get auth
+	
+	
+function getAuth() {
+
+    if(readCookie("SC2A") != null) {
+		
+        var authInfo = readCookie("SC2A");
+        authInfo = window.atob(authInfo);
+        authInfo = JSON.parse(authInfo);
+		
+		accessToken = authInfo.access_token;
+		sc2.setAccessToken(accessToken);
+		account = authInfo.username;
+		
+		//console.log("authInfo is: " + account);
+		
+		document.getElementById('user-img').src = "https://img.busy.org/@" + account;
+		document.getElementById('user-img').onerror = function() {this.src='/img/avatar.png'; this.onerror='';};
+		document.getElementById('user-account').innerText = account;
+		document.getElementById('account-link').href = "/@" + account;
+		document.getElementById('account-feed').href = "/@" + account + "#feed";
+		document.getElementById('account-wallet').href = "/@" + account + "#wallet";
+		document.getElementById('account-options').style.display = "flex";
+	
+		return authInfo;
+		
+	}
+	
+	
+	
+		document.getElementById('login_btn').style.display = "flex";
+	
+}
+	
+	
+	
+	
+	
+	
+function logOut() {
+	
+    sc2.revokeToken(function (err, result) {
+	
+		if (err) window.location.reload();
+	
+        ////console.log('You successfully logged out', err, result);
+	
+		deleteCookie(); //delete cookie to remove old token
+	
+		//console.log("out");
+	
+		window.location.reload();
+		
+    });
+	
+	
+};
+
+
+console.log('%cThis is the developer console!!!', 'color: red; font-size: 15px; font-weight: bold;');
+console.log('%cANY ACTIVITY HERE COULD POTENTIALLY COMPROMISE YOUR ACCOUNT!!!', 'color: red; font-size: 15px; font-weight: bold;');
+
+
+
+  
+
+  $(document).ready(function() {
+	
+	if(window.location.pathname != "/me") { getAuth(); return; };
+	
+	if(window.location.pathname == "/me" && window.location.search != "") {
+	
+		if(setAuth() == true) {
+			//console.log("done");
+			window.location.href = returned_state;
+		}
+		
+	} else if(window.location.pathname == "/me" && window.location.search == "") {
+		
+		//window.location.href = "/";
+		
+	}
+	
+	//if(readCookie("SC2A") != null) getAuth();
+	
+  });
+	
+	
+  
+ 
+ 
+
+   
+
+
+
+</script>
+
+
+
+			
+			
+			
+			

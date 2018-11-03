@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trending content on Steem and more - Steempedia</title>
+		
+		
+		<meta name="description" content="Discover and read trending, curated, hot and news posts from the Steem blockchain.">
+		<meta name="keywords" content="steempedia, steempedia.com, explore steempedia, steem, steemit, steem blockchain, publish article, paid blogging, cryptocurrency, steem dollars, smart media tokens, blockchain powered blog, news, make money online, work at home, bitcoin, blockchain">
+		<meta name="application-name" content="Steempedia">
+		
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Steempedia">
+		<meta property="og:title" content="Trending content on Steem and more - Steempedia">
+		<meta property="og:description" content="Discover and read trending, curated, hot and news posts from the Steem blockchain.">
+		<meta property="og:image" content="https://www.steempedia.com/img/steempedia.png">
+		
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@steempedia">
+		<meta name="twitter:title" content="Trending content on Steem and more - Steempedia">
+		<meta name="twitter:description" content="Discover and read trending, curated, hot and news posts from the Steem blockchain.">
+		
+		<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+		
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		
+		
+		
+		
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css" />
+	
+		<!-- UIkit JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/js/uikit.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/js/uikit-icons.min.js"></script>
+		
+		<script src="https://cdn.steemjs.com/lib/latest/steem.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+		
+		<script src="/scripts/timeago.js"></script>
+		
+		<script src="/scripts/sc2.min.js"></script>
+		
+    </head>
+    <body>
+	
+		<div id="navbar"></div>
+	
+	
+	
+	
+	
+	
+	<div class="uk-section" id="content-section" style="">
+		<div class="uk-container">
+		
+			
+					<h3 class="uk-heading-bullet" id="heading">Trending content on Steem</h3>
+					
+					<br/><br/>
+					
+			<div class="uk-grid-divider" uk-grid>
+			
+				<div class="uk-width-3-4@m">
+				
+					
+						<ul class="uk-flex-right" uk-tab>
+		
+        <li class="uk-active">
+			<a href="#trending" class=" uk-text-danger" id="trending" onClick="display(this)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+			Trending</a>
+		</li>
+		
+        <li>
+			<a href="#hot" class=" uk-text-warning" id="curated" onClick="show_curated()">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: users"></span>
+			Curated</a>
+		</li>
+		
+        <li>
+			<a href="#hot" class=" uk-text-success" id="hot" onClick="display(this)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: video-camera"></span>
+			Hot</a>
+		</li>
+		
+        <li>
+			<a href="#hot" class=" uk-text-primary" id="created" onClick="display(this)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: happy"></span>
+			Created</a>
+		</li>
+        
+        <li>
+			<a href="#hot" class=" uk-text-warning" id="promoted" onClick="display(this)">
+			<span class="uk-icon uk-margin-small-right" uk-icon="icon: users"></span>
+			Promoted</a>
+		</li>
+        
+    </ul>
+					
+					
+								<span id="content-spinner" style="display:none" uk-spinner></span>
+					
+					<div id="posts_container"></div>
+					
+					
+				</div>
+				
+				<div class="uk-width-1-4@m">
+				
+	
+					<div id="sidebar"></div>
+		
+					
+				</div>
+				
+			</div>
+			
+			
+	
+		
+		<hr class="uk-divider-icon">
+	
+			
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+
+	
+	
+
+	
+	
+		
+	<section name="apps info" id="main-sponsored-section" style="">
+	
+	
+	<div class="uk-container">
+	
+	
+			<h3 class="uk-heading-bullet">Sponsored</h3>
+			<br/><br/>
+			
+	
+	<div class="uk-child-width-1-3@m" uk-grid>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemit">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steemit</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Explore Steem Content</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemcenterwiki">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem Center</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Wikipedia for Steem</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemtools">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem Tools</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Explore Steem apps</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@utopian-io">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Utopian</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Reward open source</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@esteem">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">eSteem</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Mobile app for Steem</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@dtube">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">D.Tube</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Video on Steem!</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@asksteem">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Ask Steem</h3>
+							<p class="uk-text-meta uk-margin-remove-top">#1 Steem search engine</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemsql">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem SQL</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Steem as DB service</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+    <div>
+        <div class="uk-card uk-card-default">
+			<div class="uk-card-header">
+				<div class="uk-grid-small uk-flex-middle" uk-grid>
+					<div class="uk-width-auto">
+						<img class="uk-border-circle" width="40" height="40" src="https://img.busy.org/@steemdb">
+					</div>
+					<div class="uk-width-expand">
+						<h3 class="uk-card-title uk-margin-remove-bottom">Steem DB</h3>
+							<p class="uk-text-meta uk-margin-remove-top">Advanced Steem explorer</p>
+					</div>
+					<div class="uk-width-auto">
+							<a href="#" class="uk-icon-button" uk-icon="chevron-right"></a>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+	
+   
+</div>
+
+
+	
+		<br/><br/>
+		
+		<hr class="uk-divider-icon">
+	
+		
+		
+	
+		
+	</div>
+	
+	
+	</section>
+	
+	
+	
+	
+	
+	
+  
+  <!-- mounting div -->
+  
+  <div id="temp" style="display:none"></div>
+  
+  <!-- end of mounting div -->
+  
+
+	
+	
+		<div id="footer"></div>
+		
+		
+	
+	<script>
+	
+   $("#navbar").load("/files/navbar.html");		//load the navbar!!!
+   $("#sidebar").load("/files/sidebar.html");		//load the sidebar!!!
+   $("#footer").load("/files/footer.html");		//load the footer!!!
+   
+   
+	var converter = new showdown.Converter();
+  	
+	steem.api.setOptions({ url: 'https://api.steemit.com' });
+   
+	
+  
+var path = "/trending/";
+
+
+
+function display(element) {
+	
+		path = "/" + element.id + "/";
+		getState(path);
+}
+
+
+
+function getState(path) {
+	
+	document.getElementById("posts_container").innerHTML = "";
+	document.getElementById("content-spinner").style.display = "block";
+
+
+steem.api.getState(path, function(err, result) {
+  //console.log(err, result);
+  if (err) return alert(err);
+  
+	
+	////console.log(result);
+	
+	var process = (result, path) => {
+		
+	contents = result.content;
+	
+	//console.log(contents);
+	//console.log(path);
+	
+	
+		var n = "";
+  
+		if(path == "/trending/") var sort = result.discussion_idx[n].trending;
+		if(path == "/created/") var sort = result.discussion_idx[n].created;
+		if(path == "/hot/") var sort = result.discussion_idx[n].hot;
+		if(path == "/promoted/") var sort = result.discussion_idx[n].promoted;
+	
+		var data = [];
+	
+		for (x in sort) {
+			var i = sort[x];
+			var info = contents[i];
+			data.push(info);
+		}
+  
+		//console.log(data);
+		return data;
+	}
+	
+	var results = process(result, path);
+	
+	//console.log(results);
+	
+
+	document.getElementById("content-spinner").style.display = "none";
+	
+	
+  for (x in results) {
+	create_news(results[x]);
+	if (x == (results.length -1)) { timeAgo(); };
+  }
+   
+  
+    
+
+});
+
+}
+getState(path);
+
+
+
+  
+
+function show_curated() {
+  var query = {  tag: "steempedia.blog",  limit: 20	};
+  
+	document.getElementById("posts_container").innerHTML = "";
+	document.getElementById("content-spinner").style.display = "block";
+	
+  steem.api.getDiscussionsByBlog(query, function(err, result) {
+	////console.log(err, result);
+	for (x in result) {
+		create_news(result[x]);
+		if(x = result.length) { 
+			timeAgo();
+			document.getElementById('content-spinner').style.display = "none";
+		}
+	}
+	
+  });
+}
+
+
+
+  
+  function create_news(news) {
+	
+	
+	var author = news.author;
+	var title = news.title;
+	var time = news.created;
+	var permlink = news.permlink;
+	var amount = Math.max(Number(news.pending_payout_value.split('.')[0]), Number(news.total_payout_value.split('.')[0]) + Number(news.curator_payout_value.split('.')[0])).toLocaleString();
+	var votes = Number(news.active_votes.length);
+	var category = news.parent_permlink;
+	var comments = news.children;
+	var rep = steem.formatter.reputation(news.author_reputation);
+	
+	
+	
+	var html = converter.makeHtml(news.body);
+	
+	document.getElementById("temp").innerHTML = html;
+	
+	body_raw = $("#temp").text();	
+	
+	body1 = body_raw.replace(/ *\([^)]*\) */g, "");						//removes () and all content in it
+	body2 = body1.replace(/ *\[[^\]]*\] */g, "");						//removes [] and all content in it
+	body3 = body2.replace(/(?:https?|ftp):\/\/[\S\n]+/g, '');			//removes all links - targetted at image links
+	
+	
+	var summary = body3.substr(0, 150) + " ...";
+	
+	
+	summary = summary.replace(/\n/g, "");
+	
+	var src = "/assets/img/image.png";
+	
+	src = $('#temp img').attr('src');
+	
+	document.getElementById("temp").innerHTML = "";
+	
+	
+	var news_card = document.createElement("div");
+	news_card.className = "uk-card uk-card-small uk-card-default uk-grid-collapse uk-margin";
+	news_card.setAttribute("uk-grid", "");
+	
+	var img_div = document.createElement("div");
+	img_div.className = "uk-card-media-left uk-cover-container uk-width-1-4 desktop-view";
+	
+	var img = document.createElement("img");
+	img.src = src;
+	//img.setAttribute("uk-cover", "");
+	img.style.height = "100%";
+	img.style.width = "100%";
+	
+	img_div.appendChild(img);
+	
+	
+	var div = document.createElement("div");
+	div.className = "uk-width-3-4";
+	
+	var body_div = document.createElement("div");
+	body_div.className = "uk-card-body";
+	
+	var h4 = document.createElement("a");
+	h4.className = "uk-text-large";
+	h4.href = "/@" + news.author + "/" + news.permlink;
+	h4.innerText = news.title.substr(0, 50) + "...";
+	
+	
+	var divBody = document.createElement("div");
+	//divBody.className = "uk-width-expand@m";
+	
+	var divCardBody = document.createElement("div");
+	//divCardBody.className = "uk-card-body";
+	
+	
+	var divAbout = document.createElement("div");
+	divAbout.className = "uk-text-warning uk-text-small";
+	divAbout.setAttribute("uk-grid", "");
+	
+	var divAuthor = document.createElement("div");
+	var spanAuthorIcon = document.createElement("span");
+	spanAuthorIcon.className = "uk-icon uk-margin-small-right";
+	spanAuthorIcon.setAttribute("uk-icon", "icon: user");
+	divAuthor.appendChild(spanAuthorIcon);
+	
+	var aAuthor = document.createElement("a");
+	aAuthor.href = "/@" + author;
+	aAuthor.innerText = author + " ";
+	divAuthor.appendChild(aAuthor);
+	
+	var spanAuthorRep = document.createElement("span");
+	spanAuthorRep.className = "uk-badge";
+	spanAuthorRep.innerText = rep;
+	divAuthor.appendChild(spanAuthorRep);
+	
+	divAbout.appendChild(divAuthor);
+	
+	
+	
+	var divTime = document.createElement("div");
+	var spanTimeIcon = document.createElement("span");
+	spanTimeIcon.className = "uk-icon uk-margin-small-right";
+	spanTimeIcon.setAttribute("uk-icon", "icon: clock");
+	divTime.appendChild(spanTimeIcon);
+	
+	var spanTime = document.createElement("span");
+	spanTime.className = "timeago";
+	spanTime.title = time;
+	divTime.appendChild(spanTime);
+	
+	divAbout.appendChild(divTime);
+
+	
+	
+	var pSummary = document.createElement("p");
+	pSummary.className = "";
+	pSummary.innerHTML = summary;
+	
+	
+	var divMeta = document.createElement("div");
+	divMeta.className = "uk-text-primary uk-text-small";
+	divMeta.setAttribute("uk-grid", "");
+	
+	var divAmount = document.createElement("div");
+	var spanAmountIcon = document.createElement("span");
+	spanAmountIcon.className = "uk-icon uk-margin-small-right";
+	spanAmountIcon.style.fontSize = "1.1rem";
+	spanAmountIcon.innerText = "$";
+	divAmount.appendChild(spanAmountIcon);
+	
+	var spanAmount = document.createElement("span");
+	spanAmount.innerText = amount.toLocaleString();
+	divAmount.appendChild(spanAmount);
+	
+	divMeta.appendChild(divAmount);
+	
+	
+	var divVotes = document.createElement("div");
+	var spanVotesIcon = document.createElement("span");
+	spanVotesIcon.className = "uk-icon uk-margin-small-right";
+	spanVotesIcon.setAttribute("uk-icon", "icon: heart");
+	divVotes.appendChild(spanVotesIcon);
+	
+	var spanVotes = document.createElement("span");
+	spanVotes.innerText = votes.toLocaleString();
+	divVotes.appendChild(spanVotes);
+	
+	divMeta.appendChild(divVotes);
+	
+	
+	var divComments = document.createElement("div");
+	var spanCommentsIcon = document.createElement("span");
+	spanCommentsIcon.className = "uk-icon uk-margin-small-right";
+	spanCommentsIcon.setAttribute("uk-icon", "icon: comments");
+	divComments.appendChild(spanCommentsIcon);
+	
+	var spanComments = document.createElement("span");
+	spanComments.innerText = comments;
+	divComments.appendChild(spanComments);
+	
+	divMeta.appendChild(divComments);
+	
+	
+	var divTag = document.createElement("div");
+	var spanTagIcon = document.createElement("span");
+	spanTagIcon.className = "uk-icon uk-margin-small-right";
+	spanTagIcon.setAttribute("uk-icon", "icon: hashtag");
+	divTag.appendChild(spanTagIcon);
+	
+	var aTag = document.createElement("a");
+	aTag.href = "/tags/" + category;
+	aTag.innerText = category;
+	divTag.appendChild(aTag);
+	
+	divMeta.appendChild(divTag);
+	
+	
+	divCardBody.appendChild(divAbout);
+	divCardBody.appendChild(pSummary);
+	divCardBody.appendChild(divMeta);
+	
+	divBody.appendChild(divCardBody);
+	
+	
+	
+	body_div.appendChild(h4);
+
+	body_div.appendChild(divBody);
+	
+	
+	div.appendChild(body_div);
+	
+	news_card.appendChild(img_div);
+	news_card.appendChild(div);
+	
+	document.getElementById("posts_container").appendChild(news_card);
+	
+  }
+	
+	
+	
+  
+	</script>
+    </body>
+</html>
